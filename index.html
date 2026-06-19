@@ -4,31 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Haripriya Addepalli – ML Engineer & Full-Stack Developer</title>
-<link href="https://www.linkedin.com/in/haripriya-addepalli-764b75350/">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  /* ── Palette ── */
-  --beige:    #DDD0C8;
-  --beige-lt: #EDE6DF;
-  --beige-dk: #C9BAB0;
-  --grey:     #323232;
-  --grey-lt:  #4a4a4a;
-  --grey-xlt: #6b6b6b;
-  --grey-faint:#2a2a2a;
-
-  /* ── Roles ── */
-  --bg:       var(--grey);
-  --surface:  #2a2a2a;
-  --card:     #3a3939;
-  --accent:   var(--beige);
-  --accent2:  #C9BAB0;
-  --text:     var(--beige);
-  --text2:    #b5a99f;
-  --text3:    #7a6f68;
-  --border:   #454545;
-  --border2:  #5a5a5a;
-  --r2:20px;
+  --beige:    #e2d4f0;
+  --beige-lt: #f0e8ff;
+  --beige-dk: #b8a0d8;
+  --grey:     #0a0a14;
+  --grey-lt:  #12121e;
+  --grey-xlt: #1e1e32;
+  --grey-faint:#0d0d18;
+  --purple:   #8b5cf6;
+  --purple-lt:#a78bfa;
+  --teal:     #2dd4bf;
+  --teal-lt:  #5eead4;
+  --bg:       #0a0a14;
+  --surface:  #0d0d18;
+  --card:     #12121e;
+  --accent:   #e2d4f0;
+  --accent2:  #a78bfa;
+  --text:     #ede8f5;
+  --text2:    #b8aed0;
+  --text3:    #6b6080;
+  --border:   #1e1e32;
+  --border2:  #2a2a45;
+  --r2:14px;
 }
 html{scroll-behavior:smooth;font-size:16px}
 body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;line-height:1.7;overflow-x:hidden}
@@ -40,7 +41,7 @@ nav{
   padding:0 48px;height:64px;transition:background .3s,box-shadow .3s;
 }
 nav.scrolled{
-  background:rgba(50,50,50,.92);
+  background:rgba(10,10,20,.95);
   backdrop-filter:blur(14px);
   box-shadow:0 1px 0 var(--border);
 }
@@ -59,14 +60,14 @@ nav.scrolled{
 .nav-links a.active,.nav-links a:hover{color:var(--beige);border-color:var(--beige)}
 .nav-right{display:flex;align-items:center;gap:12px}
 .hire-btn{
-  background:var(--beige);color:var(--grey);
+  background:linear-gradient(135deg,var(--purple),var(--teal));color:#fff;
   border:none;padding:.5rem 1.4rem;border-radius:4px;
   font-size:.85rem;font-weight:700;cursor:pointer;
-  transition:background .2s,transform .2s;
+  transition:opacity .2s,transform .2s;
   text-decoration:none;font-family:'Inter',sans-serif;
   letter-spacing:.04em;text-transform:uppercase;
 }
-.hire-btn:hover{background:var(--beige-lt);transform:translateY(-1px)}
+.hire-btn:hover{opacity:.85;transform:translateY(-1px)}
 
 /* ── HERO ── */
 .hero{
@@ -82,28 +83,28 @@ nav.scrolled{
 .hero-grid{
   position:absolute;inset:0;pointer-events:none;z-index:0;
   background-image:
-    linear-gradient(rgba(221,208,200,.06) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(221,208,200,.06) 1px,transparent 1px);
+    linear-gradient(rgba(139,92,246,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(45,212,191,.05) 1px,transparent 1px);
   background-size:56px 56px;
 }
 .hero-glow{
   position:absolute;top:-200px;right:-150px;
   width:700px;height:700px;border-radius:50%;
-  background:radial-gradient(circle,rgba(221,208,200,.07) 0%,transparent 65%);
+  background:radial-gradient(circle,rgba(139,92,246,.12) 0%,rgba(45,212,191,.06) 50%,transparent 70%);
   pointer-events:none;z-index:0;
 }
 .hero-content{position:relative;z-index:1;max-width:860px}
 .hero-badge{
   display:inline-flex;align-items:center;gap:.6rem;
-  border:1px solid rgba(221,208,200,.25);border-radius:3px;
+  border:1px solid rgba(139,92,246,.35);border-radius:3px;
   padding:.45rem 1.1rem;font-size:.75rem;color:var(--text2);
   letter-spacing:.12em;text-transform:uppercase;margin-bottom:32px;
-  background:rgba(221,208,200,.06);
+  background:rgba(139,92,246,.08);
   opacity:0;animation:fadeUp .6s .1s forwards;
 }
 .hero-badge-dot{
   width:7px;height:7px;border-radius:50%;
-  background:var(--beige);animation:pulse 2s infinite;
+  background:var(--purple);animation:pulse 2s infinite;
 }
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.8)}}
 .hero-name{
@@ -136,14 +137,15 @@ nav.scrolled{
   opacity:0;animation:fadeUp .7s .7s forwards;
 }
 .btn-primary{
-  background:var(--beige);color:var(--grey);
+  background:linear-gradient(135deg,var(--purple),var(--teal));color:#fff;
   border:none;padding:.85rem 2rem;border-radius:4px;
   font-size:.9rem;font-weight:700;cursor:pointer;
-  transition:background .2s,transform .2s;
+  transition:opacity .2s,transform .2s;
   text-decoration:none;font-family:'Inter',sans-serif;
   letter-spacing:.04em;text-transform:uppercase;
+  box-shadow:0 4px 20px rgba(139,92,246,.3);
 }
-.btn-primary:hover{background:var(--beige-lt);transform:translateY(-3px)}
+.btn-primary:hover{opacity:.85;transform:translateY(-3px)}
 .btn-outline{
   background:transparent;color:var(--beige);
   border:1px solid rgba(221,208,200,.35);
@@ -176,7 +178,7 @@ section{padding:96px 48px}
   letter-spacing:-.03em;line-height:1.1;
   margin-bottom:52px;color:var(--beige);
 }
-.section-title em{font-style:normal;color:var(--beige-dk);font-weight:300}
+.section-title em{font-style:normal;color:var(--purple-lt);font-weight:300}
 
 /* ── ABOUT ── */
 .about-wrap{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
@@ -200,7 +202,9 @@ section{padding:96px 48px}
 .stat-card:hover{border-color:var(--beige-dk);transform:translateY(-3px)}
 .stat-num{
   font-size:2.6rem;font-weight:900;letter-spacing:-.04em;
-  color:var(--beige);margin-bottom:.2rem;
+  background:linear-gradient(135deg,var(--purple-lt),var(--teal));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;margin-bottom:.2rem;
   font-family:'Fira Code',monospace;
 }
 .stat-label{font-size:.8rem;color:var(--text3);letter-spacing:.04em;text-transform:uppercase}
@@ -209,14 +213,14 @@ section{padding:96px 48px}
 .timeline{position:relative;padding-left:40px}
 .timeline::before{
   content:'';position:absolute;left:0;top:0;bottom:0;width:1px;
-  background:linear-gradient(to bottom,var(--beige),var(--beige-dk),transparent);
+  background:linear-gradient(to bottom,var(--purple),var(--teal),transparent);
 }
 .exp-item{margin-bottom:20px;position:relative}
 .exp-item::before{
   content:'';position:absolute;left:-44px;top:1.6rem;
   width:9px;height:9px;border-radius:50%;
-  background:var(--beige);
-  box-shadow:0 0 0 3px var(--bg),0 0 0 4px rgba(221,208,200,.3);
+  background:var(--purple);
+  box-shadow:0 0 0 3px var(--bg),0 0 0 4px rgba(139,92,246,.4);
 }
 .exp-header{
   background:var(--card);border:1px solid var(--border);
@@ -274,7 +278,7 @@ section{padding:96px 48px}
 .skill-bar-track{height:3px;background:var(--border);border-radius:3px;overflow:hidden}
 .skill-bar-fill{
   height:100%;
-  background:linear-gradient(90deg,var(--beige),var(--beige-dk));
+  background:linear-gradient(90deg,var(--purple),var(--teal));
   border-radius:3px;width:0%;transition:width 1.3s ease;
 }
 
@@ -288,7 +292,7 @@ section{padding:96px 48px}
 }
 .project-card::before{
   content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,var(--beige),var(--beige-dk));
+  background:linear-gradient(90deg,var(--purple),var(--teal));
   opacity:0;transition:opacity .3s;
 }
 .project-card:hover{transform:translateY(-4px);border-color:var(--beige-dk)}
@@ -350,7 +354,7 @@ section{padding:96px 48px}
   font-size:clamp(2rem,5vw,3.5rem);font-weight:900;
   letter-spacing:-.03em;line-height:1.1;margin-bottom:1rem;color:var(--beige);
 }
-.contact-headline em{font-style:normal;color:var(--beige-dk);font-weight:300}
+.contact-headline em{font-style:normal;color:var(--teal);font-weight:300}
 .contact-sub{color:var(--text2);font-size:1rem;margin-bottom:40px;line-height:1.8}
 .contact-email{
   display:inline-block;font-size:1.2rem;font-weight:700;
@@ -413,7 +417,7 @@ footer a:hover{color:var(--beige)}
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-right">
-    <a href="mailto:haripriyaaddepalli64@gmail.com" class="hire-btn">Hire Me</a>
+    <a href="https://www.linkedin.com/in/haripriya-addepalli-764b75350/" target="_blank" class="hire-btn">Hire Me</a>
   </div>
 </nav>
 
@@ -442,6 +446,7 @@ footer a:hover{color:var(--beige)}
       <a href="#contact" class="btn-outline">Get In Touch</a>
     </div>
   </div>
+  <canvas id="heroCanvas" style="position:absolute;top:0;right:0;width:50%;height:100%;z-index:0;opacity:0.7;pointer-events:none;"></canvas>
   <div class="hero-scroll-hint">
     <div class="scroll-line"></div>Scroll to explore
   </div>
@@ -739,13 +744,17 @@ footer a:hover{color:var(--beige)}
     <p class="contact-sub">I'm open to internships, collaborations, and mentorships. If you're passionate about tech, security, or education — I'd love to connect.</p>
     <a href="mailto:haripriyaaddepalli64@gmail.com" class="contact-email">haripriyaaddepalli64@gmail.com</a>
     <div class="contact-links">
-      <a href="https://www.linkedin.com/in/haripriyaaddepalli-764b75350" target="_blank" class="contact-link">
+      <a href="https://www.linkedin.com/in/haripriya-addepalli-764b75350/" target="_blank" class="contact-link">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
         LinkedIn
       </a>
       <a href="mailto:haripriyaaddepalli64@gmail.com" class="contact-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
         Email Me
+      </a>
+      <a href="https://github.com/HaripriyaAddepalli" target="_blank" class="contact-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+        GitHub
       </a>
     </div>
   </div>
@@ -783,6 +792,96 @@ const fadeObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');fadeObs.unobserve(e.target)}});
 },{threshold:.1});
 fadeEls.forEach(el=>fadeObs.observe(el));
+
+// 3D Particle Globe
+const canvas = document.getElementById('heroCanvas');
+if(canvas){
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [], animId;
+  
+  function resize(){
+    W = canvas.width = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  const NUM = 180;
+  const R = Math.min(W,H) * 0.32;
+  let rot = 0;
+
+  for(let i=0;i<NUM;i++){
+    const theta = Math.acos(1 - 2*(i+.5)/NUM);
+    const phi = Math.PI*(1+Math.sqrt(5))*i;
+    particles.push({
+      ox: Math.sin(theta)*Math.cos(phi),
+      oy: Math.sin(theta)*Math.sin(phi),
+      oz: Math.cos(theta),
+      size: Math.random()*1.5+0.5,
+      speed: Math.random()*.002+.001
+    });
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    rot += 0.003;
+    const cx = W*0.55, cy = H*0.48;
+    const r = Math.min(W,H)*0.32;
+
+    // Draw connections
+    const projected = particles.map(p=>{
+      const x = p.ox*Math.cos(rot) - p.oz*Math.sin(rot);
+      const z = p.ox*Math.sin(rot) + p.oz*Math.cos(rot);
+      const y = p.oy;
+      const scale = (z+2)/3;
+      return { sx: cx+x*r*scale, sy: cy+y*r*scale, z, scale };
+    });
+
+    // Draw lines between close particles
+    ctx.lineWidth = 0.4;
+    for(let i=0;i<projected.length;i++){
+      for(let j=i+1;j<projected.length;j++){
+        const dx=projected[i].sx-projected[j].sx;
+        const dy=projected[i].sy-projected[j].sy;
+        const dist=Math.sqrt(dx*dx+dy*dy);
+        if(dist<r*0.35){
+          const alpha=(1-dist/(r*0.35))*0.3*projected[i].scale;
+          ctx.strokeStyle=`rgba(139,92,246,${alpha})`;
+          ctx.beginPath();
+          ctx.moveTo(projected[i].sx,projected[i].sy);
+          ctx.lineTo(projected[j].sx,projected[j].sy);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Draw dots
+    projected.forEach((p,i)=>{
+      const alpha = (p.z+1)/2;
+      const size = particles[i].size * p.scale * 1.5;
+      // alternate purple and teal
+      const color = i%3===0 ? `rgba(45,212,191,${alpha*0.9})` : `rgba(139,92,246,${alpha*0.9})`;
+      ctx.beginPath();
+      ctx.arc(p.sx, p.sy, size, 0, Math.PI*2);
+      ctx.fillStyle = color;
+      ctx.fill();
+    });
+
+    // Outer glow ring
+    const grad = ctx.createRadialGradient(cx,cy,r*0.85,cx,cy,r*1.05);
+    grad.addColorStop(0,'rgba(139,92,246,0)');
+    grad.addColorStop(0.5,'rgba(139,92,246,0.06)');
+    grad.addColorStop(1,'rgba(45,212,191,0)');
+    ctx.beginPath();
+    ctx.arc(cx,cy,r,0,Math.PI*2);
+    ctx.strokeStyle=grad;
+    ctx.lineWidth=20;
+    ctx.stroke();
+
+    animId = requestAnimationFrame(draw);
+  }
+  draw();
+}
 
 // Typewriter
 const roles=['ML Engineer','Full-Stack Developer','AI Automation Builder','SIH Shortlisted','Google Student Ambassador'];
