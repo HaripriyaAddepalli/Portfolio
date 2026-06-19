@@ -282,6 +282,19 @@ section{padding:96px 48px}
   border-radius:3px;width:0%;transition:width 1.3s ease;
 }
 
+
+.project-links{display:flex;gap:8px;margin-top:1rem;flex-wrap:wrap}
+.project-link{
+  display:inline-flex;align-items:center;gap:.4rem;
+  padding:.35rem .9rem;border-radius:4px;font-size:.78rem;font-weight:600;
+  text-decoration:none;letter-spacing:.04em;text-transform:uppercase;
+  transition:opacity .2s,transform .2s;
+}
+.project-link:hover{opacity:.8;transform:translateY(-1px)}
+.project-link.live{background:linear-gradient(135deg,var(--purple),var(--teal));color:#fff;}
+.project-link.github{background:transparent;border:1px solid var(--border2);color:var(--text2);}
+.project-link svg{width:13px;height:13px}
+
 /* ── PROJECTS ── */
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
 .project-card{
@@ -661,6 +674,12 @@ footer a:hover{color:var(--beige)}
       <div class="project-title">Virtual Try-On Website</div>
       <p class="project-desc">Deep learning system allowing users to visualize clothing on themselves in real time using computer vision. Shortlisted at Smart India Hackathon. Live on Render.</p>
       <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">PyTorch</span><span class="tech-tag">COCO Dataset</span></div>
+      <div class="project-links">
+        <a href="https://virtual-try-on-website-ar-vr.onrender.com" target="_blank" class="project-link live">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          Live Demo
+        </a>
+      </div>
     </div>
     <div class="project-card">
       <div class="project-type">Deep Learning / NLP</div>
