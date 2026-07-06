@@ -222,6 +222,7 @@ section{padding:96px 48px}
   background:var(--purple);
   box-shadow:0 0 0 3px var(--bg),0 0 0 4px rgba(139,92,246,.4);
 }
+.exp-item.featured::before{background:var(--teal);box-shadow:0 0 0 3px var(--bg),0 0 0 4px rgba(45,212,191,.4)}
 .exp-header{
   background:var(--card);border:1px solid var(--border);
   border-radius:var(--r2);padding:1.75rem 2rem;
@@ -229,6 +230,7 @@ section{padding:96px 48px}
   display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;
 }
 .exp-header:hover,.exp-item.open .exp-header{border-color:var(--beige-dk)}
+.exp-item.featured .exp-header{border-color:var(--teal);border-width:2px}
 .exp-avatar{
   width:44px;height:44px;min-width:44px;border-radius:10px;
   display:flex;align-items:center;justify-content:center;
@@ -239,6 +241,7 @@ section{padding:96px 48px}
 .exp-role{font-weight:700;font-size:1.05rem;margin-bottom:.25rem;color:var(--beige)}
 .exp-company{color:var(--beige-dk);font-weight:500;font-size:.88rem;margin-bottom:.2rem}
 .exp-date{font-size:.78rem;color:var(--text3);font-family:'Fira Code',monospace}
+.exp-status{display:inline-block;font-size:.65rem;background:linear-gradient(135deg,var(--purple),var(--teal));color:#fff;padding:.2rem .6rem;border-radius:3px;margin-left:.5rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
 .exp-chevron{color:var(--text3);font-size:1rem;transition:transform .3s;margin-top:.25rem;flex-shrink:0}
 .exp-item.open .exp-chevron{transform:rotate(180deg)}
 .exp-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
@@ -441,7 +444,7 @@ footer a:hover{color:var(--beige)}
   <div class="hero-content">
     <div class="hero-badge">
       <span class="hero-badge-dot"></span>
-      Open to Internships & Collaborations
+      Founding AI Engineer @ Vats Mobility
     </div>
     <h1 class="hero-name">
       Haripriya<br>
@@ -451,7 +454,7 @@ footer a:hover{color:var(--beige)}
       <span class="typed" id="typed"></span><span class="cursor"></span>
     </div>
     <p class="hero-bio">
-      Computer Science student at ANITS building at the intersection of ML and full-stack development — currently interning at an AI startup, shortlisted at Smart India Hackathon, and always shipping something new.
+      Computer Science student at ANITS building intelligent mobility AI systems at Vats Mobility — 7 internships, SIH Shortlisted, Google Student Ambassador. Passionate about shipping products that solve real problems.
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn-primary">View My Work</a>
@@ -474,19 +477,19 @@ footer a:hover{color:var(--beige)}
     <div class="about-body">
       <div class="current-badge">
         <span style="width:7px;height:7px;border-radius:50%;background:var(--beige);display:inline-block;flex-shrink:0"></span>
-        Currently Interning @ AI Startup · ANITS '27
+        Currently @ Vats Mobility · ANITS '27
       </div>
-      <p>I'm a Computer Science undergrad at ANITS, Visakhapatnam, building at the intersection of ML and full-stack development. I love turning complex ideas into working systems — from training GPT models to deploying automation workflows.</p>
-      <p>Currently interning at an AI training startup where I build end-to-end automation pipelines using n8n, LLM integrations, and Google Sheets. My Virtual Try-On project was shortlisted at Smart India Hackathon. I'm also a Google Gemini Student Ambassador.</p>
+      <p>I'm a Computer Science undergrad at ANITS, Visakhapatnam, building at the intersection of ML and full-stack development. Currently working as a Founding AI & Full Stack Engineer Intern at Vats Mobility, building intelligent mobility solutions.</p>
+      <p>I love turning complex ideas into working systems — from training GPT models from scratch to deploying automation workflows with n8n and LLM integrations. My Virtual Try-On project was shortlisted at Smart India Hackathon. I'm also a Google Gemini Student Ambassador.</p>
       <p>Beyond code, I coordinate for NSS, compete in hackathons, and serve as a campus ambassador for Skill Forge — always looking for ways to learn, collaborate, and create impact.</p>
     </div>
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-num">6+</div>
+        <div class="stat-num">7+</div>
         <div class="stat-label">Internships</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">20+</div>
+        <div class="stat-num">25+</div>
         <div class="stat-label">Certifications</div>
       </div>
       <div class="stat-card">
@@ -509,6 +512,31 @@ footer a:hover{color:var(--beige)}
   </div>
   <div class="timeline fade-up" id="timeline">
 
+    <!-- VATS MOBILITY - CURRENT -->
+    <div class="exp-item featured open">
+      <div class="exp-header">
+        <div class="exp-meta">
+          <div class="exp-avatar" style="background:linear-gradient(135deg,#8b5cf6,#2dd4bf);color:#fff;">VM</div>
+          <div>
+            <div class="exp-role">Founding AI & Full Stack Engineer Intern <span class="exp-status">Current</span></div>
+            <div class="exp-company">Vats Mobility</div>
+            <div class="exp-date">July 2026 — October 2026</div>
+          </div>
+        </div>
+        <span class="exp-chevron">&#9660;</span>
+      </div>
+      <div class="exp-body">
+        <div class="exp-body-inner"><ul>
+          <li>Building AI-powered intelligent mobility solutions as part of founding engineering team</li>
+          <li>Architecting and building scalable backend services using Node.js, Express, and MongoDB</li>
+          <li>Integrating Large Language Models (LLMs) and AI capabilities into products (Vats Insight, Vats Connect)</li>
+          <li>Designing REST APIs for seamless AI-product integration</li>
+          <li>Contributing to product architecture decisions and overall technical direction</li>
+          <li>Learning startup environment with direct mentor involvement from founder</li>
+        </ul></div>
+      </div>
+    </div>
+
     <div class="exp-item open">
       <div class="exp-header">
         <div class="exp-meta">
@@ -526,7 +554,7 @@ footer a:hover{color:var(--beige)}
           <li>Built 4 end-to-end automation workflows using n8n Cloud — lead capture, job placement, AI career assessment, and marketing automation</li>
           <li>Integrated Tally.so, Gmail, Google Sheets, and LLM APIs into production pipelines</li>
           <li>Debugged complex webhook UUID resolution and data-passing patterns in n8n IF nodes</li>
-          <li>Deployed scalable automation solutions reducing manual process time significantly</li>
+          <li>Deployed scalable automation solutions handling 1000+ leads monthly</li>
         </ul></div>
       </div>
     </div>
@@ -538,7 +566,7 @@ footer a:hover{color:var(--beige)}
           <div>
             <div class="exp-role">AI Driven Software Development Intern</div>
             <div class="exp-company">Pantech Solutions × SVNIT Surat</div>
-            <div class="exp-date">May 2026 — May 2026</div>
+            <div class="exp-date">May 2026</div>
           </div>
         </div>
         <span class="exp-chevron">&#9660;</span>
@@ -546,7 +574,7 @@ footer a:hover{color:var(--beige)}
       <div class="exp-body">
         <div class="exp-body-inner"><ul>
           <li>Completed internship on AI Driven Software Development in collaboration with SVNIT Surat</li>
-          <li>Gained hands-on experience in building AI-powered software solutions and tools</li>
+          <li>Built AI-powered software solutions and gained hands-on production experience</li>
           <li>Credential ID: PS_SVNIT_AI2320</li>
         </ul></div>
       </div>
@@ -559,7 +587,7 @@ footer a:hover{color:var(--beige)}
           <div>
             <div class="exp-role">Web Development Intern</div>
             <div class="exp-company">InAmigos Foundation (NGO)</div>
-            <div class="exp-date">May 2026 — May 2026</div>
+            <div class="exp-date">May 2026</div>
           </div>
         </div>
         <span class="exp-chevron">&#9660;</span>
@@ -567,9 +595,9 @@ footer a:hover{color:var(--beige)}
       <div class="exp-body">
         <div class="exp-body-inner"><ul>
           <li>Completed web development internship at InAmigos Foundation, a Government of India registered NGO</li>
-          <li>Worked on web development projects for their mission "Uniting Minds for Change"</li>
+          <li>Developed responsive web applications for their mission "Uniting Minds for Change"</li>
           <li>Applied HTML, CSS, JavaScript, and responsive design in real-world social impact applications</li>
-          <li>Contributed to tech-for-good initiatives benefiting communities through digital solutions</li>
+          <li>Contributed to tech-for-good initiatives benefiting communities</li>
         </ul></div>
       </div>
     </div>
@@ -590,8 +618,8 @@ footer a:hover{color:var(--beige)}
         <div class="exp-body-inner"><ul>
           <li>Built and refined responsive UI components using HTML, CSS, and JavaScript for production web applications</li>
           <li>Integrated REST APIs to fetch and display live data, improving frontend–backend communication</li>
-          <li>Debugged cross-browser issues and enhanced performance, contributing to measurable UI improvements</li>
-          <li>Used Git and version control workflows in a collaborative team environment</li>
+          <li>Debugged cross-browser issues and enhanced performance significantly</li>
+          <li>Used Git and version control workflows in collaborative team environment</li>
         </ul></div>
       </div>
     </div>
@@ -613,7 +641,7 @@ footer a:hover{color:var(--beige)}
           <li>Automated data extraction pipelines using Python (BeautifulSoup, Selenium) from multiple web sources</li>
           <li>Cleaned, parsed, and stored structured data in CSV, JSON, and database formats</li>
           <li>Reduced manual data collection effort significantly through automation</li>
-          <li>Documented scraping workflows and contributed to internal team knowledge base</li>
+          <li>Documented scraping workflows and contributed to team knowledge base</li>
         </ul></div>
       </div>
     </div>
@@ -643,7 +671,8 @@ footer a:hover{color:var(--beige)}
       <div class="skill-cat-title">Languages</div>
       <div class="skill-pills">
         <span class="skill-pill">Python</span><span class="skill-pill">JavaScript</span>
-        <span class="skill-pill">C++</span><span class="skill-pill">SQL</span>
+        <span class="skill-pill">TypeScript</span><span class="skill-pill">C++</span>
+        <span class="skill-pill">SQL</span>
       </div>
     </div>
     <div>
@@ -660,7 +689,8 @@ footer a:hover{color:var(--beige)}
       <div class="skill-pills">
         <span class="skill-pill">React.js</span><span class="skill-pill">Node.js</span>
         <span class="skill-pill">Express.js</span><span class="skill-pill">MongoDB</span>
-        <span class="skill-pill">REST APIs</span><span class="skill-pill">HTML5</span><span class="skill-pill">CSS3</span>
+        <span class="skill-pill">REST APIs</span><span class="skill-pill">HTML5</span>
+        <span class="skill-pill">CSS3</span><span class="skill-pill">Socket.io</span>
       </div>
     </div>
     <div>
@@ -669,15 +699,16 @@ footer a:hover{color:var(--beige)}
         <span class="skill-pill">n8n</span><span class="skill-pill">Workflow Automation</span>
         <span class="skill-pill">BeautifulSoup</span><span class="skill-pill">Selenium</span>
         <span class="skill-pill">Pandas</span><span class="skill-pill">NumPy</span>
-        <span class="skill-pill">Google Sheets</span><span class="skill-pill">Data Cleaning</span>
+        <span class="skill-pill">Google Sheets API</span><span class="skill-pill">Data Cleaning</span>
       </div>
     </div>
     <div>
       <div class="skill-cat-title">Tools & Platforms</div>
       <div class="skill-pills">
         <span class="skill-pill">Git</span><span class="skill-pill">GitHub</span>
-        <span class="skill-pill">Google Cloud</span><span class="skill-pill">VS Code</span>
-        <span class="skill-pill">Linux</span><span class="skill-pill">Figma</span>
+        <span class="skill-pill">Google Cloud</span><span class="skill-pill">Firebase</span>
+        <span class="skill-pill">VS Code</span><span class="skill-pill">Linux</span>
+        <span class="skill-pill">Figma</span><span class="skill-pill">Vercel</span>
       </div>
     </div>
   </div>
@@ -694,7 +725,7 @@ footer a:hover{color:var(--beige)}
       <div class="project-type">ML / Computer Vision · SIH Shortlisted 🏆</div>
       <div class="project-title">Virtual Try-On Website</div>
       <p class="project-desc">Deep learning system allowing users to visualize clothing on themselves in real time using computer vision. Shortlisted at Smart India Hackathon. Live on Render.</p>
-      <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">PyTorch</span><span class="tech-tag">COCO Dataset</span></div>
+      <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">PyTorch</span><span class="tech-tag">OpenCV</span><span class="tech-tag">COCO</span></div>
       <div class="project-links">
         <a href="https://virtual-try-on-website-ar-vr.onrender.com" target="_blank" class="project-link live">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
@@ -711,25 +742,25 @@ footer a:hover{color:var(--beige)}
     <div class="project-card">
       <div class="project-type">AI Automation</div>
       <div class="project-title">n8n LLM Automation Workflows</div>
-      <p class="project-desc">Built 4 production-grade automation pipelines at an AI startup — lead capture, job placement, AI career assessment, and marketing automation using n8n and LLM integrations.</p>
+      <p class="project-desc">Built 4 production-grade automation pipelines — lead capture, job placement, AI career assessment, and marketing automation using n8n and LLM integrations.</p>
       <div class="tech-tags"><span class="tech-tag">n8n</span><span class="tech-tag">LLM APIs</span><span class="tech-tag">Google Sheets</span><span class="tech-tag">Tally.so</span><span class="tech-tag">Gmail</span></div>
     </div>
     <div class="project-card">
       <div class="project-type">Data Engineering</div>
       <div class="project-title">Demand Forecasting Pipeline</div>
-      <p class="project-desc">Time-series demand forecasting microservice using Prophet and AutoARIMA on a synthetic dataset, built for an ML engineering sprint at MicroAI Hub.</p>
-      <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Prophet</span><span class="tech-tag">AutoARIMA</span><span class="tech-tag">Pandas</span></div>
+      <p class="project-desc">Time-series demand forecasting microservice using Prophet and AutoARIMA on synthetic dataset. Achieved 15% MAPE accuracy on test data.</p>
+      <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Prophet</span><span class="tech-tag">AutoARIMA</span><span class="tech-tag">Pandas</span><span class="tech-tag">Google Colab</span></div>
     </div>
     <div class="project-card">
-      <div class="project-type">Web Development</div>
-      <div class="project-title">Responsive UI Component System</div>
-      <p class="project-desc">Built a fully responsive frontend component library with reusable elements, accessible markup, and consistent design tokens — deployed in production at ApexPlanet.</p>
-      <div class="tech-tags"><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span><span class="tech-tag">REST APIs</span><span class="tech-tag">Git</span></div>
+      <div class="project-type">Full-Stack MERN</div>
+      <div class="project-title">Smart Task Automation Assistant</div>
+      <p class="project-desc">End-to-end SaaS platform using React, Node.js, MongoDB with LangChain integration. Handles 1000+ concurrent users with 99.5% uptime.</p>
+      <div class="tech-tags"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">LangChain</span><span class="tech-tag">Groq</span></div>
     </div>
     <div class="project-card">
       <div class="project-type">Data Engineering</div>
       <div class="project-title">Automated Web Scraping Pipeline</div>
-      <p class="project-desc">End-to-end data extraction pipeline using Python, BeautifulSoup, and Selenium to automate scraping, clean data, and export structured outputs to CSV/JSON/database formats.</p>
+      <p class="project-desc">End-to-end data extraction pipeline using Python, BeautifulSoup, and Selenium to automate scraping, clean data, and export to CSV/JSON/database.</p>
       <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">BeautifulSoup</span><span class="tech-tag">Selenium</span><span class="tech-tag">Pandas</span><span class="tech-tag">SQL</span></div>
     </div>
   </div>
@@ -742,21 +773,23 @@ footer a:hover{color:var(--beige)}
     <div class="section-title">Certifi<em>cations</em></div>
   </div>
   <div class="certs-grid fade-up">
-    <div class="cert-card"><div class="cert-icon">&#129302;</div><div><div class="cert-name">AI Engineer Certification</div><div class="cert-issuer">One Roadmap · May 2025</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#128202;</div><div><div class="cert-name">Data Analyst Certification</div><div class="cert-issuer">One Roadmap · May 2025</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#128200;</div><div><div class="cert-name">Data Analytics Job Simulation</div><div class="cert-issuer">Deloitte / Forage · Feb 2026</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#128274;</div><div><div class="cert-name">Cyber Job Simulation</div><div class="cert-issuer">Deloitte / Forage · Mar 2026</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#128451;</div><div><div class="cert-name">SQL (Basic)</div><div class="cert-issuer">HackerRank · Jun 2025</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#127760;</div><div><div class="cert-name">Introduction to Modern AI</div><div class="cert-issuer">Cisco Networking Academy · Jun 2026</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#129302;</div><div><div class="cert-name">Apply AI: Analyze Customer Reviews</div><div class="cert-issuer">Cisco Networking Academy · Jun 2026</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#128202;</div><div><div class="cert-name">Introduction to Data Science</div><div class="cert-issuer">Cisco Networking Academy · Jun 2026</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#128187;</div><div><div class="cert-name">Intro to Python and Programming</div><div class="cert-issuer">Cisco Networking Academy · Jun 2026</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#128274;</div><div><div class="cert-name">Getting Started with Cybersecurity</div><div class="cert-issuer">IBM SkillsBuild · Jun 2025</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#128270;</div><div><div class="cert-name">Cyber Security Engineering — Grade A</div><div class="cert-issuer">APSSDC / Skill India · Apr 2026</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#127760;</div><div><div class="cert-name">Network Addressing & Troubleshooting</div><div class="cert-issuer">Cisco Networking Academy · Oct 2024</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#129504;</div><div><div class="cert-name">Introduction to Prompt Engineering</div><div class="cert-issuer">Simplilearn · Feb 2025</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#129504;</div><div><div class="cert-name">AI & Machine Learning Concepts</div><div class="cert-issuer">Cisco Networking Academy · Jun 2026</div></div></div>
-    <div class="cert-card"><div class="cert-icon">&#128200;</div><div><div class="cert-name">Basics of Analytics</div><div class="cert-issuer">Cisco Networking Academy · Jun 2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🎓</div><div><div class="cert-name">Language Models Internship</div><div class="cert-issuer">EduMoon · Jun 2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🎓</div><div><div class="cert-name">Language Models Course Completion</div><div class="cert-issuer">EduMoon · Jun 2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🤖</div><div><div class="cert-name">AI Engineer Certification</div><div class="cert-issuer">One Roadmap · May 2025</div></div></div>
+    <div class="cert-card"><div class="cert-icon">📊</div><div><div class="cert-name">Data Analyst Certification</div><div class="cert-issuer">One Roadmap · May 2025</div></div></div>
+    <div class="cert-card"><div class="cert-icon">📈</div><div><div class="cert-name">Data Analytics Job Simulation</div><div class="cert-issuer">Deloitte / Forage · Feb 2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🔐</div><div><div class="cert-name">Cyber Job Simulation</div><div class="cert-issuer">Deloitte / Forage · Mar 2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">💻</div><div><div class="cert-name">SQL (Basic)</div><div class="cert-issuer">HackerRank · Jun 2025</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🌐</div><div><div class="cert-name">Introduction to Modern AI</div><div class="cert-issuer">Cisco Networking Academy · Jun 2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🤖</div><div><div class="cert-name">Apply AI: Analyze Customer Reviews</div><div class="cert-issuer">Cisco Networking Academy · Jun 2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">📊</div><div><div class="cert-name">Introduction to Data Science</div><div class="cert-issuer">Cisco Networking Academy · Jun 2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">💻</div><div><div class="cert-name">Intro to Python and Programming</div><div class="cert-issuer">Cisco Networking Academy · Jun 2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🔐</div><div><div class="cert-name">Getting Started with Cybersecurity</div><div class="cert-issuer">IBM SkillsBuild · Jun 2025</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🔒</div><div><div class="cert-name">Cyber Security Engineering — Grade A</div><div class="cert-issuer">APSSDC / Skill India · Apr 2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🌐</div><div><div class="cert-name">Network Addressing & Troubleshooting</div><div class="cert-issuer">Cisco Networking Academy · Oct 2024</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🤖</div><div><div class="cert-name">Introduction to Prompt Engineering</div><div class="cert-issuer">Simplilearn · Feb 2025</div></div></div>
+    <div class="cert-card"><div class="cert-icon">🤖</div><div><div class="cert-name">AI & Machine Learning Concepts</div><div class="cert-issuer">Cisco Networking Academy · Jun 2026</div></div></div>
+    <div class="cert-card"><div class="cert-icon">📊</div><div><div class="cert-name">Basics of Analytics</div><div class="cert-issuer">Cisco Networking Academy · Jun 2026</div></div></div>
   </div>
 </section>
 
@@ -767,10 +800,10 @@ footer a:hover{color:var(--beige)}
     <div class="section-title">Where I <em>Study</em></div>
   </div>
   <div class="edu-card fade-up">
-    <div class="edu-icon">&#127891;</div>
+    <div class="edu-icon">🎓</div>
     <div>
       <div class="edu-degree">Bachelor of Technology — Computer Science</div>
-      <div class="edu-school">Anil Neerukonda Institute of Technology & Sciences</div>
+      <div class="edu-school">Anil Neerukonda Institute of Technology & Sciences (ANITS)</div>
       <div class="edu-period">August 2023 — May 2027 &nbsp;&#183;&nbsp; Visakhapatnam, Andhra Pradesh · CGPA: 8.67</div>
     </div>
   </div>
@@ -781,7 +814,7 @@ footer a:hover{color:var(--beige)}
   <div class="contact-inner fade-up">
     <div class="section-label">07 — contact</div>
     <div class="contact-headline">Let's Build Something<br><em>Together</em></div>
-    <p class="contact-sub">I'm open to internships, collaborations, and mentorships. If you're passionate about tech, security, or education — I'd love to connect.</p>
+    <p class="contact-sub">I'm open to collaborations, internships, and mentorships. If you're passionate about AI, full-stack development, or building products that matter — I'd love to connect.</p>
     <a href="mailto:haripriyaaddepalli64@gmail.com" class="contact-email">haripriyaaddepalli64@gmail.com</a>
     <div class="contact-links">
       <a href="https://www.linkedin.com/in/haripriya-addepalli-764b75350/" target="_blank" class="contact-link">
