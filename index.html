@@ -231,12 +231,6 @@ section{padding:96px 48px}
 }
 .exp-header:hover,.exp-item.open .exp-header{border-color:var(--beige-dk)}
 .exp-item.featured .exp-header{border-color:var(--teal);border-width:2px}
-.exp-avatar{
-  width:44px;height:44px;min-width:44px;border-radius:10px;
-  display:flex;align-items:center;justify-content:center;
-  font-weight:800;font-size:1rem;color:var(--grey);
-  margin-right:14px;flex-shrink:0;
-}
 .exp-meta{display:flex;align-items:flex-start;gap:0;flex:1}
 .exp-role{font-weight:700;font-size:1.05rem;margin-bottom:.25rem;color:var(--beige)}
 .exp-company{color:var(--beige-dk);font-weight:500;font-size:.88rem;margin-bottom:.2rem}
@@ -298,12 +292,13 @@ section{padding:96px 48px}
 .project-link svg{width:13px;height:13px}
 
 /* ── PROJECTS ── */
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
 .project-card{
   background:var(--card);border:1px solid var(--border);
   border-radius:var(--r2);padding:2rem;
   transition:transform .3s,border-color .3s;
   position:relative;overflow:hidden;
+  display:flex;flex-direction:column;
 }
 .project-card::before{
   content:'';position:absolute;top:0;left:0;right:0;height:2px;
@@ -320,7 +315,7 @@ section{padding:96px 48px}
   font-family:'Fira Code',monospace;
 }
 .project-title{font-weight:700;font-size:1.1rem;margin-bottom:.65rem;color:var(--beige)}
-.project-desc{color:var(--text2);font-size:.9rem;line-height:1.75;margin-bottom:1.5rem}
+.project-desc{color:var(--text2);font-size:.9rem;line-height:1.75;margin-bottom:1.5rem;flex-grow:1}
 .tech-tags{display:flex;gap:.45rem;flex-wrap:wrap}
 .tech-tag{
   font-size:.73rem;padding:.2rem .6rem;border-radius:3px;
@@ -454,7 +449,7 @@ footer a:hover{color:var(--beige)}
       <span class="typed" id="typed"></span><span class="cursor"></span>
     </div>
     <p class="hero-bio">
-      Computer Science student at ANITS building intelligent mobility AI systems at Vats Mobility — 7 internships, SIH Shortlisted, Google Student Ambassador. Passionate about shipping products that solve real problems.
+      Computer Science student at ANITS building intelligent mobility AI systems at Vats Mobility — 7 internships, 6+ deployed projects, SIH Shortlisted, Google Student Ambassador. Passionate about shipping products that solve real problems.
     </p>
     <div class="hero-actions">
       <a href="#projects" class="btn-primary">View My Work</a>
@@ -721,11 +716,83 @@ footer a:hover{color:var(--beige)}
     <div class="section-title">What I've <em>Built</em></div>
   </div>
   <div class="projects-grid fade-up">
+
+    <!-- 1. FOOD DELIVERY - USER PANEL -->
     <div class="project-card">
-      <div class="project-type">ML / Computer Vision · SIH Shortlisted 🏆</div>
+      <div class="project-type">Full-Stack MERN · Live</div>
+      <div class="project-title">Food Delivery - User Panel</div>
+      <p class="project-desc">Complete food delivery platform with user authentication, restaurant browsing, cart management, order checkout, and order history. Fully responsive with intuitive UI.</p>
+      <div class="tech-tags"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Express</span><span class="tech-tag">REST APIs</span></div>
+      <div class="project-links">
+        <a href="https://food-delivery-frontend-s2l9.onrender.com/" target="_blank" class="project-link live">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+
+    <!-- 2. FOOD DELIVERY - ADMIN PANEL -->
+    <div class="project-card">
+      <div class="project-type">Full-Stack MERN · Admin</div>
+      <div class="project-title">Food Delivery - Admin Panel</div>
+      <p class="project-desc">Administrative dashboard for food delivery platform. Manage restaurants, menus, orders, users, and analytics. Real-time order updates and comprehensive reporting.</p>
+      <div class="tech-tags"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">Dashboard</span><span class="tech-tag">Analytics</span></div>
+      <div class="project-links">
+        <a href="https://food-delivery-admin-wrme.onrender.com/" target="_blank" class="project-link live">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          Admin Access
+        </a>
+      </div>
+    </div>
+
+    <!-- 3. SMART TASK AUTOMATION -->
+    <div class="project-card">
+      <div class="project-type">Full-Stack SaaS</div>
+      <div class="project-title">Smart Task Automation Assistant</div>
+      <p class="project-desc">AI-powered productivity SaaS platform that automates repetitive tasks using LangChain and Groq. Real-time updates, task history, custom workflows. Handles 1000+ concurrent users.</p>
+      <div class="tech-tags"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">LangChain</span><span class="tech-tag">Groq</span></div>
+      <div class="project-links">
+        <a href="https://smart-task-frontend-one.vercel.app/" target="_blank" class="project-link live">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+
+    <!-- 4. RAKSHA-AI -->
+    <div class="project-card">
+      <div class="project-type">Computer Vision · AI</div>
+      <div class="project-title">Raksha-AI</div>
+      <p class="project-desc">AI-powered safety and security system using computer vision for threat detection in real-time. Integrates object detection, threat classification, and instant alerts.</p>
+      <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">OpenCV</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">Flask</span><span class="tech-tag">Real-time</span></div>
+      <div class="project-links">
+        <a href="https://raksha-ai-three.vercel.app/" target="_blank" class="project-link live">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+
+    <!-- 5. NOTESTREAM -->
+    <div class="project-card">
+      <div class="project-type">Full-Stack Web App</div>
+      <div class="project-title">NoteStream</div>
+      <p class="project-desc">Modern notes application for organizing and managing notes efficiently. Features real-time sync, categorization, search, and cloud storage integration.</p>
+      <div class="tech-tags"><span class="tech-tag">Next.js</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">JWT Auth</span><span class="tech-tag">Responsive</span></div>
+      <div class="project-links">
+        <a href="https://notestream-kj7z.onrender.com/" target="_blank" class="project-link live">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          Live Demo
+        </a>
+      </div>
+    </div>
+
+    <!-- 6. VIRTUAL TRY-ON -->
+    <div class="project-card">
+      <div class="project-type">Deep Learning · SIH Shortlisted 🏆</div>
       <div class="project-title">Virtual Try-On Website</div>
-      <p class="project-desc">Deep learning system allowing users to visualize clothing on themselves in real time using computer vision. Shortlisted at Smart India Hackathon. Live on Render.</p>
-      <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">PyTorch</span><span class="tech-tag">OpenCV</span><span class="tech-tag">COCO</span></div>
+      <p class="project-desc">Deep learning system allowing real-time clothing visualization using computer vision and pose estimation. Shortlisted at Smart India Hackathon. Advanced image processing.</p>
+      <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">TensorFlow</span><span class="tech-tag">PyTorch</span><span class="tech-tag">OpenCV</span></div>
       <div class="project-links">
         <a href="https://virtual-try-on-website-ar-vr.onrender.com" target="_blank" class="project-link live">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
@@ -733,36 +800,7 @@ footer a:hover{color:var(--beige)}
         </a>
       </div>
     </div>
-    <div class="project-card">
-      <div class="project-type">Deep Learning / NLP</div>
-      <div class="project-title">GPT Language Model from Scratch</div>
-      <p class="project-desc">Built a character-level GPT model in PyTorch from scratch — implementing RoPE positional encoding, multi-head masked self-attention, trained on Tiny Shakespeare dataset.</p>
-      <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">PyTorch</span><span class="tech-tag">Transformers</span><span class="tech-tag">NLP</span><span class="tech-tag">RoPE</span></div>
-    </div>
-    <div class="project-card">
-      <div class="project-type">AI Automation</div>
-      <div class="project-title">n8n LLM Automation Workflows</div>
-      <p class="project-desc">Built 4 production-grade automation pipelines — lead capture, job placement, AI career assessment, and marketing automation using n8n and LLM integrations.</p>
-      <div class="tech-tags"><span class="tech-tag">n8n</span><span class="tech-tag">LLM APIs</span><span class="tech-tag">Google Sheets</span><span class="tech-tag">Tally.so</span><span class="tech-tag">Gmail</span></div>
-    </div>
-    <div class="project-card">
-      <div class="project-type">Data Engineering</div>
-      <div class="project-title">Demand Forecasting Pipeline</div>
-      <p class="project-desc">Time-series demand forecasting microservice using Prophet and AutoARIMA on synthetic dataset. Achieved 15% MAPE accuracy on test data.</p>
-      <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">Prophet</span><span class="tech-tag">AutoARIMA</span><span class="tech-tag">Pandas</span><span class="tech-tag">Google Colab</span></div>
-    </div>
-    <div class="project-card">
-      <div class="project-type">Full-Stack MERN</div>
-      <div class="project-title">Smart Task Automation Assistant</div>
-      <p class="project-desc">End-to-end SaaS platform using React, Node.js, MongoDB with LangChain integration. Handles 1000+ concurrent users with 99.5% uptime.</p>
-      <div class="tech-tags"><span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">MongoDB</span><span class="tech-tag">LangChain</span><span class="tech-tag">Groq</span></div>
-    </div>
-    <div class="project-card">
-      <div class="project-type">Data Engineering</div>
-      <div class="project-title">Automated Web Scraping Pipeline</div>
-      <p class="project-desc">End-to-end data extraction pipeline using Python, BeautifulSoup, and Selenium to automate scraping, clean data, and export to CSV/JSON/database.</p>
-      <div class="tech-tags"><span class="tech-tag">Python</span><span class="tech-tag">BeautifulSoup</span><span class="tech-tag">Selenium</span><span class="tech-tag">Pandas</span><span class="tech-tag">SQL</span></div>
-    </div>
+
   </div>
 </section>
 
@@ -932,7 +970,6 @@ if(canvas){
     projected.forEach((p,i)=>{
       const alpha = (p.z+1)/2;
       const size = particles[i].size * p.scale * 1.5;
-      // alternate purple and teal
       const color = i%3===0 ? `rgba(45,212,191,${alpha*0.9})` : `rgba(139,92,246,${alpha*0.9})`;
       ctx.beginPath();
       ctx.arc(p.sx, p.sy, size, 0, Math.PI*2);
